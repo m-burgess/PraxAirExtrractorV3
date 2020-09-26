@@ -1,0 +1,15 @@
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\bin\Debug\PraxAirExtractV3.exe.config
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\bin\Debug\PraxAirExtractV3.exe
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\bin\Debug\PraxAirExtractV3.pdb
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3.csprojAssemblyReference.cache
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\MainWindow.g.cs
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\App.g.cs
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3_MarkupCompile.cache
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3_MarkupCompile.lref
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\MainWindow.baml
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3.g.resources
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3.Properties.Resources.resources
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3.csproj.GenerateResource.cache
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3.csproj.CoreCompileInputs.cache
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3.exe
+C:\Users\burg3\source\repos\PraxAirExtractV3\PraxAirExtractV3\obj\Debug\PraxAirExtractV3.pdb
