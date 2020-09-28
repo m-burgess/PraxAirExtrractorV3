@@ -8,9 +8,9 @@
         Title="PraxAirExtractorV3
         " Height="650" Width="750">
     <Grid>
-        <Button Content="Set Directory" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="134" Height="35"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="144,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="482,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208"/>
+        <Button Click="directoryButton_Click" Name="directoryButton" Content="Set Directory" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="134" Height="35"/>
+        <TextBox Name="directoryTextBox" HorizontalAlignment="Left" Height="23" Margin="144,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+        <TextBox Name ="calSheetTextBox" HorizontalAlignment="Left" Height="23" Margin="482,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208"/>
         <Label Content="Nox 500" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top"/>
         <Label Content="Nox 2500" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top"/>
         <Label Content="Nox 10,000" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top"/>
@@ -40,42 +40,42 @@
         <Label Content="O2 100% 3" HorizontalAlignment="Left" Margin="307,430,0,0" VerticalAlignment="Top"/>
         <Label Content="O2 100% 4" HorizontalAlignment="Left" Margin="307,461,0,0" VerticalAlignment="Top"/>
         <Label Content="Fuel 1" HorizontalAlignment="Left" Margin="307,492,0,0" VerticalAlignment="Top"/>
-        <Button Content="Select Cal Sheet" HorizontalAlignment="Left" Margin="343,10,0,0" VerticalAlignment="Top" Width="134" Height="35"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="90,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="90,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,305,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="90,336,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,367,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,394,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,425,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,456,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,487,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="90,523,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="392,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="392,305,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,336,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,363,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,394,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,425,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,456,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,492,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <Button Name="calSheetButton" Content="Select Cal Sheet" HorizontalAlignment="Left" Margin="343,10,0,0" VerticalAlignment="Top" Width="134" Height="35" Click="calSheetButton_Click"/>
+        <TextBox Name="nox500TextBox" HorizontalAlignment="Left" Height="18" Margin="90,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="nox2500TextBox" HorizontalAlignment="Left" Height="21" Margin="90,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="nox10kTextBox" HorizontalAlignment="Left" Height="21" Margin="90,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name ="no500TextBox" HorizontalAlignment="Left" Height="21" Margin="90,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="no2500TextBox" HorizontalAlignment="Left" Height="18" Margin="90,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="no10kTextBox" HorizontalAlignment="Left" Height="21" Margin="90,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="thc500TextBox" HorizontalAlignment="Left" Height="21" Margin="90,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="thc2500TextBox" HorizontalAlignment="Left" Height="21" Margin="90,305,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="thc10kTextBox" HorizontalAlignment="Left" Height="18" Margin="90,336,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="ch4500TextBox" HorizontalAlignment="Left" Height="21" Margin="90,367,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="ch42500TextBox" HorizontalAlignment="Left" Height="21" Margin="90,394,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="ch410kTextBox" HorizontalAlignment="Left" Height="21" Margin="90,425,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="co5000TextBox" HorizontalAlignment="Left" Height="21" Margin="90,456,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="coHighTextBox" HorizontalAlignment="Left" Height="21" Margin="90,487,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="co2TextBox" HorizontalAlignment="Left" Height="21" Margin="90,523,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox Name="o225TextBox" HorizontalAlignment="Left" Height="21" Margin="392,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="n21TextBox" HorizontalAlignment="Left" Height="21" Margin="392,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="n22TextBox" HorizontalAlignment="Left" Height="21" Margin="392,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="n23TextBox" HorizontalAlignment="Left" Height="18" Margin="392,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="n24TextBox" HorizontalAlignment="Left" Height="21" Margin="392,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="air1TextBox" HorizontalAlignment="Left" Height="21" Margin="392,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="air2TextBox" HorizontalAlignment="Left" Height="21" Margin="392,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="air3TextBox" HorizontalAlignment="Left" Height="18" Margin="392,305,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="air4TextBox" HorizontalAlignment="Left" Height="21" Margin="392,336,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="o21001TextBox" HorizontalAlignment="Left" Height="21" Margin="392,363,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="o21002TextBox" HorizontalAlignment="Left" Height="21" Margin="392,394,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="o21003TextBox" HorizontalAlignment="Left" Height="21" Margin="392,425,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="o21004TextBox" HorizontalAlignment="Left" Height="21" Margin="392,456,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="fuel1TextBox" HorizontalAlignment="Left" Height="21" Margin="392,492,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
         <Label Content="EGR 16%" HorizontalAlignment="Left" Margin="13,544,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="90,549,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" RenderTransformOrigin="0.484,0.455"/>
+        <TextBox Name="egrTextBox" HorizontalAlignment="Left" Height="18" Margin="90,549,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" RenderTransformOrigin="0.484,0.455"/>
         <Label Content="Fuel 2" HorizontalAlignment="Left" Margin="307,518,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="392,518,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="392,549,0,0" VerticalAlignment="Top" Width="134" Height="35"/>
-        <ProgressBar HorizontalAlignment="Left" Height="25" Margin="0,584,0,0" VerticalAlignment="Top" Width="732" Visibility="Hidden"/>
+        <TextBox Name="fuel2TextBox" HorizontalAlignment="Left" Height="21" Margin="392,518,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="232"/>
+        <Button Click="submitButton_Click" Name="submitButton" Content="Submit" HorizontalAlignment="Left" Margin="392,549,0,0" VerticalAlignment="Top" Width="134" Height="35"/>
+        <ProgressBar Name="proessBar" HorizontalAlignment="Left" Height="25" Margin="0,584,0,0" VerticalAlignment="Top" Width="732" Visibility="Hidden"/>
 
     </Grid>
 </Window>

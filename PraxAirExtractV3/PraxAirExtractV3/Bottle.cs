@@ -11,9 +11,11 @@ namespace PraxAirExtractV3
         public string CylinderNumber { get; set; }
         public string LotNumber { get; set; }
         public string CertificationDate { get; set; }
-        public string GasType { get; set; }
+        public string Unit { get; set; }
 
-        
+        public string Tracability { get; set; }
+
+
 
     }
 

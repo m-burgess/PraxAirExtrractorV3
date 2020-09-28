@@ -11,11 +11,9 @@ namespace PraxAirExtractV3
        
         public string ExpirationDate { get; set; }
 
-        public int Range { get; set; }
+        public double SpanValue { get; set; }
 
-        public int SpanValue { get; set; }
-
-        public SpanBottle(string gas, int range, string cylNum, string lot, string certDate, string expDate, int span)
+        public SpanBottle(string cylNum, string lot, string certDate, string expDate, double span, string unit, string traceability)
         {
             CylinderNumber = cylNum;
 
@@ -23,19 +21,19 @@ namespace PraxAirExtractV3
 
             CertificationDate = certDate;
 
-            GasType = gas;
+            Unit = unit;
 
             ExpirationDate = expDate;
 
-            Range = range;
-
             SpanValue = span;
+
+            Tracability = traceability;
 
         }
 
         public override string ToString()
         {
-            return GasType + " " + Range + " " + CylinderNumber + " " + LotNumber + " " + CertificationDate + " " + ExpirationDate + " " + SpanValue;
+            return CylinderNumber + " " + LotNumber + " " + CertificationDate + " " + ExpirationDate + " " + SpanValue + " " + Unit + " " + Tracability;
         }
 
 

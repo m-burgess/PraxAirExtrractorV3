@@ -10,26 +10,28 @@ namespace PraxAirExtractV3
     { 
         public string AnalysisCylinder { get; set; }
 
-        int BottleNumber { get; set; }
+        public string Concentration { get; set; }
 
-        public UtilityBottle(string gas, int number, string cylNum, string lot, string certDate)
+        public UtilityBottle(string analysisCyl, string cylNum, string lot, string certDate, string concentration)
         {
+            AnalysisCylinder = analysisCyl;
+
             CylinderNumber = cylNum;
 
             LotNumber = lot;
 
             CertificationDate = certDate;
 
-            GasType = gas;
-
-            BottleNumber = number;
+            Concentration = concentration;
 
 
         }
 
+        
+
         public override string ToString()
         {
-            return GasType + " " + BottleNumber + " " + CylinderNumber + " " + LotNumber + " " + CertificationDate;
+            return AnalysisCylinder + " " + CylinderNumber + " " + LotNumber + " " + CertificationDate + " " + Concentration;
         }
     }
 
