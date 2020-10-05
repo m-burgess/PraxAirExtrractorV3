@@ -252,8 +252,10 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains(" 200 ppm"))
+                if (pdfList[i].Contains("2375 ppm"))
                 {
+                    string removePpm = pdfList[i + 2].Replace(" ppm", "");
+                    no2500.SpanValue = int.Parse(removePpm);
 
                 }
 
@@ -401,9 +403,11 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains(" 200 ppm"))
+                if (pdfList[i].Contains("792 ppm"))
                 {
-                    thc2500.SpanValue = 0;
+                    string removePpm = pdfList[i + 2].Replace(" ppm", "");
+                    double convertedInt = double.Parse(removePpm);
+                    thc2500.SpanValue = convertedInt * 3;
                 }
 
                 //Cylinder Number
@@ -501,9 +505,10 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains(" 200 ppm"))
+                if (pdfList[i].Contains("475 ppm"))
                 {
-                    ch4500.SpanValue = 0;
+                    string removePpm = pdfList[i + 2].Replace(" ppm", "");
+                    ch4500.SpanValue = double.Parse(removePpm);
                 }
 
                 //Cylinder Number
@@ -550,9 +555,10 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains(" 200 ppm"))
+                if (pdfList[i].Contains("2375 ppm"))
                 {
-                    ch42500.SpanValue = 0;
+                    string removePpm = pdfList[i + 2].Replace(" ppm", "");
+                    ch42500.SpanValue = double.Parse(removePpm);
                 }
 
                 //Cylinder Number
@@ -840,7 +846,7 @@ namespace PraxAirExtractV3
             SpanBottle o225 = new SpanBottle(null, null, null, null, 0, "%", "1% NIST");
             //Extract Text From PDF
             String extractedText = StripPDF(file);
-            
+            Console.WriteLine(extractedText);
             //Split Text into List
             List<string> pdfList = new List<string>(extractedText.Split(new string[] { "\r\n" }, StringSplitOptions.None));
 
@@ -850,9 +856,10 @@ namespace PraxAirExtractV3
                 //Span Value
                 if (pdfList[i].Contains("21.0 %"))
                 {
-                    string removePercent = pdfList[1 + 2].Replace(" %","");
-                    string removeSpace = removePercent.Replace(" ", "");
-                    //o225.SpanValue = double.Parse(removeSpace);
+
+                    string removePercent = pdfList[i + 2].Replace(" %","");
+                   
+                    o225.SpanValue = double.Parse(removePercent);
                 }
 
                 //Cylinder Number
@@ -1027,9 +1034,9 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains(" 200 ppm"))
+                if (pdfList[i].Contains("Analyzed Cylinder Number(s):"))
                 {
-                    fuel.AnalysisCylinder = "";
+                    fuel.AnalysisCylinder = pdfList[i + 2];
                 }
 
                 //Lot Number
