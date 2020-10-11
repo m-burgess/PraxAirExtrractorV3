@@ -202,7 +202,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("475 ppm"))
+                if (pdfList[i].Equals("475 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm", "");
                     no500.SpanValue = int.Parse(removePpm);
@@ -252,7 +252,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("2375 ppm"))
+                if (pdfList[i].Equals("2375 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm", "");
                     no2500.SpanValue = int.Parse(removePpm);
@@ -302,7 +302,7 @@ namespace PraxAirExtractV3
             //Loop through list and get specfic values
             for (int i = 0; i < pdfList.Count; i++)
             {
-                if (pdfList[i].Contains("9500 ppm"))
+                if (pdfList[i].Equals("9500 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm", "");
                     no10k.SpanValue = int.Parse(removePpm);
@@ -344,7 +344,7 @@ namespace PraxAirExtractV3
             SpanBottle thc500 = new SpanBottle(null, null, null, null, 0, "ppm", "1% NIST");
             //Extract Text From PDF
             String extractedText = StripPDF(file);
-            
+            Console.WriteLine(extractedText);
             //Split Text into List
             List<string> pdfList = new List<string>(extractedText.Split(new string[] { "\r\n" }, StringSplitOptions.None));
 
@@ -352,7 +352,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("158 ppm"))
+                if (pdfList[i].Equals("158 ppm"))
                 {
                     string removePpm = pdfList[i+2].Replace(" ppm", "");
                     double convertedInt = double.Parse(removePpm);
@@ -403,7 +403,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("792 ppm"))
+                if (pdfList[i].Equals("792 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm", "");
                     double convertedInt = double.Parse(removePpm);
@@ -454,7 +454,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("3200 ppm"))
+                if (pdfList[i].Equals("3200 ppm"))
                 {
                     string removePpm = pdfList[i+2].Replace(" ppm", "");
                     double convertedInt = double.Parse(removePpm);
@@ -505,7 +505,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("475 ppm"))
+                if (pdfList[i].Equals("475 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm", "");
                     ch4500.SpanValue = double.Parse(removePpm);
@@ -555,7 +555,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("2375 ppm"))
+                if (pdfList[i].Equals("2375 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm", "");
                     ch42500.SpanValue = double.Parse(removePpm);
@@ -605,7 +605,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("9500 ppm"))
+                if (pdfList[i].Equals("9500 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm","");
                     ch410k.SpanValue = double.Parse(removePpm);
@@ -655,7 +655,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("4750 ppm"))
+                if (pdfList[i].Equals("4750 ppm"))
                 {
                     string removePpm = pdfList[i + 2].Replace(" ppm","");
                     co5000.SpanValue = double.Parse(removePpm);
@@ -705,7 +705,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("1.52 %"))
+                if (pdfList[i].Equals("1.52 %"))
                 {
                     string removePercent = pdfList[i + 2].Replace(" %", "");
                     double coHighSpan = double.Parse(removePercent);
@@ -756,7 +756,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("15.2 %"))
+                if (pdfList[i].Equals("15.2 %"))
                 {
                     string removePercent = pdfList[i + 2].Replace(" %", "");
                     co216.SpanValue = double.Parse(removePercent);
@@ -805,7 +805,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("15.2 %"))
+                if (pdfList[i].Equals("15.2 %"))
                 {
                     string removePercent = pdfList[i + 2].Replace(" %", "");
                     egr16.SpanValue = double.Parse(removePercent);
@@ -846,7 +846,7 @@ namespace PraxAirExtractV3
             SpanBottle o225 = new SpanBottle(null, null, null, null, 0, "%", "1% NIST");
             //Extract Text From PDF
             String extractedText = StripPDF(file);
-            Console.WriteLine(extractedText);
+            
             //Split Text into List
             List<string> pdfList = new List<string>(extractedText.Split(new string[] { "\r\n" }, StringSplitOptions.None));
 
@@ -854,7 +854,7 @@ namespace PraxAirExtractV3
             for (int i = 0; i < pdfList.Count; i++)
             {
                 //Span Value
-                if (pdfList[i].Contains("21.0 %"))
+                if (pdfList[i].Equals("21.0 %"))
                 {
 
                     string removePercent = pdfList[i + 2].Replace(" %","");
